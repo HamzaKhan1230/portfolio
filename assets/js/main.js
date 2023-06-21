@@ -4,6 +4,34 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+// email sent
+
+function sendemail(){
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var subject = document.getElementById('subject').value;
+  var message = document.getElementById('message').value;
+
+  var body = 'Name:' + name + '<br> Email: ' + email + '<br> Subject:' + subject + '<br> Message:' + message; 
+
+
+  Email.send({
+
+ SecureToken : "ed85de61-9264-4bd4-a95f-3ebaed73d853",
+To : 'hamza2009a@aptechgdn.net',
+From : "humzasheikhh00king@gmail.com",
+Subject : subject,
+Body : body
+}).then(
+message => alert("Email Has Been Sent")
+);
+}
+
+
+
+
+
 (function() {
   "use strict";
 
